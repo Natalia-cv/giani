@@ -421,6 +421,64 @@ div ul li a{
     position: relative;
     left: 20px;
 }
+
+/*cambiar local*/
+.logo-home{
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    display: table;
+    top: 35px;
+    float: right;
+}
+
+.logo-carrito{
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    display: table;
+    top: 30px;
+    float: right;
+}
+.flecha{
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    display: table;
+    top: 40px;
+    float: left;
+}
+/*paginas de transicion*/
+
+.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+ 
+.page.left {
+    left: -100%;
+}
+ 
+.page.center {
+    left: 0;
+}
+ 
+.page.right {
+    left: 100%;
+}
+ 
+.page.transition {
+    -webkit-transition-duration: .25s;
+    transition-duration: .25s;
+}
+
+
+
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 
 nav ul li {

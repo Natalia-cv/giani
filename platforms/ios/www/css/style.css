@@ -415,6 +415,11 @@ div ul li a{
 	background-color: #9EC2A9!important;
 	font-size: 20px;
 	font-weight: bolder;
+
+}
+.img-atras{
+    position: relative;
+    left: 20px;
 }
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 
