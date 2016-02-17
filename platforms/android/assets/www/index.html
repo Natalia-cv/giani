@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<head>    
+        <meta charset="UTF-8">
+        
+       <!--  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" /> -->
+        <meta name="viewport" content="width=768px, user-scalable=no">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic' rel='stylesheet' type='text/css'>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> 
+
+
+        <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+        
+        
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <!-- scrip de transiciones -->
+        <script type='text/javascript' src='http://coenraets.org/blog/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
+        <script type='text/javascript' src='http://coenraets.org/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+        <script type='text/javascript' src='http://coenraets.org/blog/wp-content/themes/canvas/includes/js/third-party.min.js?ver=4.0.1'></script>
+        <script type='text/javascript' src='http://coenraets.org/blog/wp-content/themes/canvas/includes/js/modernizr.min.js?ver=2.6.2'></script>
+        <script type='text/javascript' src='http://coenraets.org/blog/wp-content/themes/canvas/includes/js/general.min.js?ver=4.0.1'></script>
+
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <style type="text/css">
+
+        body {
+            overflow: hidden;
+        }
+
+        .page {
+            position: absolute;
+            padding: 12px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+.page.left {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+
+.page.center {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.page.right {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+}
+
+        .page.transition {
+            -webkit-transition-duration: .25s;
+            transition-duration: .25s;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<!-- HOME -->
+<div id="homePage" class="page center" >
+    <section class="header" >
+
+        <!-- menu topisimo -->
+        <div class="row space20">
+            <div class="logo_wrapper col-sm-4 col-xs-12">
+                <img class="logo-giani" src="https://84static.loadingplay.com/static/images/963c5ae6e0e7b9ab3f2f3a79a8a439ac_logo.png" />
+            </div>
+            <div class="menu_wrapper col-sm-4 col-xs-12">
+                <div class="row">
+                    <nav class="primer-list navbar navbar-transparent">
+
+                            <ul class="nav navbar-nav navbar-left"> 
+                                <li><a href="">NUEVO</a></li>
+                                <li><a href="">SALE</a></li>
+                                <li><a href="">CAMPAÑA</a></li>
+                            </ul>
+                    </nav>  
+                </div>
+            </div>      
+            <div class="menu_wrapper col-sm-4 col-xs-12">
+                <ul class="segund-list navbar-right">
+                    <li><a href="">Cambiar</a></li>
+                    <li><a style="color:#CDA372;" href="javascript:slidePageFrom(cambioLocal, 'left')";>LOCAL CASA COSTANERA</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- buscador -->
+        <div class="row">
+            <div class="col-sm-12">
+                <img class="fondo-banner" src="https://7static.loadingplay.com/static/images/0498de4efa88ce029eebc6e78c12dc79_banner_home.png">
+                  <!-- {% if is_admin %}
+                    <div class="image-upload lapiz">
+                        <label for="img_banner_home">
+                            <img class="change-image" src="{{ site_base }}/static/img/btn-edit.png" onmouseover="this.src='{{ site_base }}/static/img/btn-edit-hover.png';" onmouseout="this.src='{{ site_base }}/static/img/btn-edit.png';">
+                        </label>
+                        <input type="file" class="editableimage" image-id="{{ site.name }}img_banner_home" name="image" id="img_banner_home" >
+                    </div>
+                    {% end %}
+                    <img id="{{ site.name }}_banner_home" src="{{ read_image(site.name + '_banner_home', 1) }}" onload="this.src='{{ read_image(site.name + '_banner_home',500) }}'" class="img-responsive visible-movil" alt="item";>
+        -->
+                <div class="row">
+                    <div class="col-sm-12 text-center btn-buscar">
+                        <input type="text" style="background-color:transparent; border: 1px solid white;" size="50" maxlength="30" value="..." name="....">
+                        <input class="bnt-rosa" type="submit" value="Buscar" readonly="readonly"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- menu de fitros -->
+        <div class="row nav-color">
+            <div class="col-sm-8">
+                <div class="collapse navbar-collapse opac" id="bs-example-navbar-collapse-1">
+
+                    <ul class="color-indic nav navbar-nav navbar-left">                               
+                        <li><a href="">FILTROS</a></li>
+                        <li class="dropdown">
+                            <a href="" class="colorr" data-toggle="dropdown" class="dropdown-toggle"  >CALZADO <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="" class="colorr" data-toggle="dropdown" class="dropdown-toggle"  >COLECCION <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="" class="colorr" data-toggle="dropdown" class="dropdown-toggle"  >TALLA 42 <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="menu_wrapper filtro col-sm-4">
+                    <ul class="segund-list navbar-right">
+                        <li>
+                            <a href="">ELIMINAR FILTRO</a>
+                        </li>
+                    </ul>
+            </div>
+            
+        </div>
+    </section>
+
+    <div class="container">  
+    </div>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12" >
+                    <div class="col-sm-4 text-center">
+                        <a id="" class="" 
+                        href="javascript:slidePageFrom(detalleProducto, 'right');">
+                            <img class="cont-img"src="https://7static.loadingplay.com/static/images/3cd0dd749f176b130bc92fa1b0f01e3c_zapato1.png">
+                        </a>
+                        <h2 class="text-left">Nombre Zapato ABC</h2>
+                        <h5 class="text-left">Colleccion Calles</h5>
+                        <div class="text-left">$59.900</div>
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <a id="" class="" 
+                        href="javascript:slidePageFrom(detalleProducto, 'right');">
+                            <img class="cont-img" src="https://84static.loadingplay.com/static/images/1c63d4a037516138c0d7213abc7804d3_zapato2.png">
+                        </a>
+                        <h2 class="text-left">Nombre Zapato ABC</h2>
+                        <h5 class="text-left">Colleccion Calles</h5>
+                        <div class="text-left">$59.900</div>
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <a id="" class=""
+                        href="javascript:slidePageFrom(detalleProducto, 'right');">
+                            <img class="cont-img" src="https://7static.loadingplay.com/static/images/359816d5804a5d09be56bf423a324b32_zapato3.png">
+                        </a>
+                        <h2 class="text-left">Nombre Zapato ABC</h2>
+                        <h5 class="text-left">Colleccion Calles</h5>
+                        <div class="text-left">$59.900</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 text-center">
+                        <a id="" class="" 
+                            href="javascript:slidePageFrom(detalleProducto, 'right');">
+                            <img class="cont-img" src="https://7static.loadingplay.com/static/images/a1568bca6a6393d32c67b21477d0f21f_zapato5.png">
+                        </a>
+                        <h2 class="text-left">Nombre Zapato ABC</h2>
+                        <h5 class="text-left">Colleccion Calles</h5>
+                        <div class="text-left">$59.900</div>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a id="" class=""
+                    href="javascript:slidePageFrom(detalleProducto, 'right');">
+                        <img class="cont-img" src="https://84static.loadingplay.com/static/images/9f358460ffafec06ec709a8043090b9a_zapato6.png">
+                    </a>
+                    <h2 class="text-left">Nombre Zapato ABC</h2>
+                    <h5 class="text-left">Colleccion Calles</h5>
+                    <div class="text-left">$59.900</div>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a id="" class=""
+                    href="javascript:slidePageFrom(detalleProducto, 'right');">
+                        <img class="cont-img" src="https://7static.loadingplay.com/static/images/15e6d4228977093231b8749944f9f124_zapato4.png">
+                    </a>
+                    <h2 class="text-left">Nombre Zapato ABC</h2>
+                    <h5 class="text-left">Colleccion Calles</h5>
+                    <div class="text-left">$59.900</div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 text-center">
+                    <a id="" class=""
+                    href="javascript:slidePageFrom(detalleProducto, 'right');">
+                        <img class="cont-img" src="https://7static.loadingplay.com/static/images/3cd0dd749f176b130bc92fa1b0f01e3c_zapato1.png">
+                    </a>
+                    <h2 class="text-left">Nombre Zapato ABC</h2>
+                    <h5 class="text-left">Colleccion Calles</h5>
+                    <div class="text-left">$59.900</div>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a id="" class=""
+                    href="javascript:slidePageFrom(detalleProducto, 'right');">
+                        <img class="cont-img" src="https://84static.loadingplay.com/static/images/1c63d4a037516138c0d7213abc7804d3_zapato2.png">
+                    </a>
+                    <h2 class="text-left">Nombre Zapato ABC</h2>
+                    <h5 class="text-left">Colleccion Calles</h5>
+                    <div class="text-left">$59.900</div>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a id="" class=""
+                    href="javascript:slidePageFrom(detalleProducto, 'right');">
+                        <img class="cont-img" src="https://7static.loadingplay.com/static/images/359816d5804a5d09be56bf423a324b32_zapato3.png">
+                    </a>
+                    <h2 class="text-left">Nombre Zapato ABC</h2>
+                    <h5 class="text-left">Colleccion Calles</h5>
+                    <div class="text-left">$59.900</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- HOME -->
+
+
+<!-- DETALLE PRODUCTO -->
+<div id="detalleProducto" class="page right" >
+    <section class="header" >
+
+        <!-- menu topisimo -->
+        <div class="row space20">
+            <div class="logo_wrapper col-sm-4 col-xs-12">
+                <a href="javascript:slidePageFrom(homePage, 'left');">
+                <img class="logo-giani" src="https://84static.loadingplay.com/static/images/963c5ae6e0e7b9ab3f2f3a79a8a439ac_logo.png" />
+                </a>
+            </div>
+            <div class="menu_wrapper col-sm-4 col-xs-12">
+                <div class="row">
+                    <nav class="primer-list navbar navbar-transparent">
+
+                            <ul class="nav navbar-nav navbar-left"> 
+                                <li><a href="">Nuevo</a></li>
+                                <li><a href="">Sale</a></li>
+                                <li><a href="">Campaña</a></li>
+                            </ul>
+                    </nav>  
+                </div>
+            </div>      
+            <div class="menu_wrapper col-sm-4 col-xs-12">
+                <ul class="segund-list navbar-right">
+                    <li><a href="">Cambiar</a></li>
+                    <li><a style="color:#CDA372;" href="javascript:slidePageFrom(cambioLocal, 'left')";>LOCAL CASA COSTANERA</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section>
+            <div class="container">
+                    <div class="row">
+                         <div class="col-sm-8">
+                             <img class="detall-prod"src="https://84static.loadingplay.com/static/images/9f358460ffafec06ec709a8043090b9a_zapato6.png">
+                         </div> 
+                         <div class="col-sm-4">
+                                <h1 class="text-1">QUELTEHUE C5</h1> 
+                                <h2 class="text-1">BEIGE CROCO CAFE</h2>
+                                <h3>59.990</h3>
+                                <p>COLOR:BEIGE CROCO CAFE 
+                                    CAPELLADA(MATERIAL EXTERIOR):
+                                    CUERO Y RENO
+                                    FORRO (METERIAL IMTERIOR):CUERO
+                                    PLANTILLA:CUERO
+                                    PLANTA(SUELA):GOMA
+                                    TACO:GOMA
+                                    ALTURA DEL TACO:5CM
+                                    ESTILO:BOTIN
+                                    <br>
+                                    Stock:8
+                                </p>
+                                
+                                <div class="collapse navbar-collapse opac" id="bs-example-navbar-collapse-1">
+
+                                    <ul class="nav navbar-nav navbar-left">
+                                        <li class="dropdown">
+                                            <a href="" class="nav-talla" data-toggle="dropdown" class="dropdown-toggle"  >ELIJA TU TALLA <b class="caret"></b>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a  class="" 
+                                href="javascript:slidePageFrom(pedido, 'left');">
+                                <button type="button" class="btn btn-info active">SOLICITA ESTE PRODUCTO</button></a>
+
+                        </div>  
+                    </div>
+             </div>
+    </section>
+    <section>
+            <div class="container">
+                    <div class="row">
+                            <div class="col-sm-9">
+                                 <img class="detall-prod" src="https://84static.loadingplay.com/static/images/9f358460ffafec06ec709a8043090b9a_zapato6.png">   
+                            </div>
+                    </div>
+            </div>
+    </section>
+    <section>
+            <div class="container">
+                    <div class="row">
+                            <div class="col-sm-9">
+                                 <img class="detall-prod" src="https://84static.loadingplay.com/static/images/9f358460ffafec06ec709a8043090b9a_zapato6.png">   
+                            </div>
+                    </div>
+            </div>
+    </section>
+
+</div>
+<!-- DETALLE PRODUCTO -->
+
+<!-- PEDIDO -->
+<div id="pedido" class="page right" >
+ <div class="row space20">
+            <div class="logo_wrapper col-sm-4 col-xs-12">
+                <a href="javascript:slidePageFrom(homePage, 'left');">
+                <img class="logo-giani" src="https://84static.loadingplay.com/static/images/963c5ae6e0e7b9ab3f2f3a79a8a439ac_logo.png" />
+                </a>
+            </div>
+            <div class="menu_wrapper col-sm-4 col-xs-12">
+                <div class="row">
+                    <nav class="primer-list navbar navbar-transparent">
+
+                            <ul class="nav navbar-nav navbar-left"> 
+                                <li><a href="">Nuevo</a></li>
+                                <li><a href="">Sale</a></li>
+                                <li><a href="">Campaña</a></li>
+                            </ul>
+                    </nav>  
+                </div>
+            </div>      
+            <div class="menu_wrapper col-sm-4 col-xs-12">
+                <ul class="segund-list navbar-right">
+                    <li><a href="">Cambiar</a></li>
+                    <li><a style="color:#CDA372;" href="javascript:slidePageFrom(cambioLocal, 'left')";>LOCAL CASA COSTANERA</a></li>
+                </ul>
+            </div>
+        </div>
+<section>
+        <div class="row">
+            <div class="col-sm-12 space20">
+                 <a href="javascript:slidePageFrom(detalleProducto, 'right');">
+                    <img class="img-atras" src="https://7static.loadingplay.com/static/images/96eedd4b5d0a467a334eb9a6aa657ba8_Atras.png">
+                </a>
+            </div>    
+        </div>
+</section>
+<section>
+        <div class="container space50">
+            <div class="row">
+                 <div class="col-sm-12">
+                     <h1 class="text-pedid">Tu pedido llegará al mezón para que puedas probartelo y comprar</h1>
+                 </div>
+            </div>
+        </div>
+</section>
+<section>
+        <div class="container space80">
+            <div class="row">
+                 <div class="col-sm-4">
+                     <img class="cont-img" src="https://7static.loadingplay.com/static/images/9f358460ffafec06ec709a8043090b9a_zapato6.png">
+                 </div>
+                 <div class="col-sm-4">
+                      <p class="descrip-zap">Nombre de Zapato ABC</p>
+                 </div>
+                 <div class="col-sm-2">
+                      <p class="descrip-zap">Talle 37</p>   
+                 </div>
+                 <div class="col-sm-2">
+                      <p class="descrip-zap">$59.900</p>
+                 </div>
+            </div>
+        </div>
+</section>
+<section>
+        <div class="container">
+            <div class="row">
+                 <div class="col-sm-4">
+                     <img class="cont-img" src="https://7static.loadingplay.com/static/images/9f358460ffafec06ec709a8043090b9a_zapato6.png">
+                 </div>
+                 <div class="col-sm-4">
+                      <p class="descrip-zap">Nombre de Zapato ABC</p>
+                 </div>
+                 <div class="col-sm-2">
+                      <p class="descrip-zap">Talle 37</p>   
+                 </div>
+                 <div class="col-sm-2">
+                      <p class="descrip-zap">$59.900</p>
+                 </div>
+            </div>
+        </div>
+</section>
+<section>
+        <div class="row space90">
+             <div class="col-sm-offset-5 col-sm-4">
+             <button type="button" class="btn btn-lg btn-default">Seguir vitrineando</button>
+             </div>   
+        </div>
+</section>
+<section>
+        <div class="container space200">
+            <div class="row">
+                <div class="col-sm-6">
+                      <button type="button" class="btn-lg btn-block btn btn-info active">INGRESA TU NOMBRE</button>
+                </div> 
+                <div class="col-sm-6">
+                      <button type="button" class="btn-lg btn-ttc btn-block btn btn-info active">SOLICITAR</button>
+                </div> 
+            </div>
+        </div>
+</section>
+</div>
+<!-- PEDIDO -->
+
+<!-- CAMBIAR LOCAL -->
+
+<body class="">
+<div id="cambioLocal" class="page right" >
+
+<div class="row space20">
+        <div class="logo_wrapper col-sm-4 col-xs-12">
+            <a href="javascript:slidePageFrom(homePage, 'left');">
+                <img class="logo-giani" src="https://84static.loadingplay.com/static/images/963c5ae6e0e7b9ab3f2f3a79a8a439ac_logo.png" />
+            </a>
+        </div>
+        <div class="menu_wrapper col-sm-4 col-xs-12">
+            <div class="row">
+                <nav class="primer-list navbar navbar-transparent">
+
+                        <ul class="nav navbar-nav navbar-left"> 
+                            <li><a href="">Nuevo</a></li>
+                            <li><a href="">Sale</a></li>
+                            <li><a href="">Campaña</a></li>
+                        </ul>
+                </nav>  
+            </div>
+        </div>      
+        <div class="menu_wrapper col-sm-4 col-xs-12">
+            <ul class="segund-list navbar-right">
+                <li><a href="">Cambiar</a></li>
+                <li>
+                        <a style="color:#CDA372;" href="javascript:slidePageFrom(cambioLocal, 'left')";>LOCAL CASA COSTANERA</a></li>
+            </ul>
+        </div>
+</div>
+
+<section>
+        <div class="row space20">
+            <div class="col-sm-12">
+                <a href="javascript:slidePageFrom(homePage, 'right');">
+                 <img class="img-atras" src="https://7static.loadingplay.com/static/images/96eedd4b5d0a467a334eb9a6aa657ba8_Atras.png">
+                 </a>
+            </div>    
+        </div>
+</section>
+
+<section>
+        <div class="row space90">
+             <div class="col-sm-offset-1 col-sm-3">
+                   <img class="logo-home" src="https://84static.loadingplay.com/static/images/7ab18a72d0e80f18097a19507ee61955_Home.png">     
+             </div>   
+        
+             <div class="col-sm-5">
+                   <h1>Tienda Roble casa costanera</h1>
+                    <p>Nueva costanera 3900, nivel subsuelo 224</p>    
+             </div>
+             <div class="col-sm-3">
+                   <img class="flecha" src="https://7static.loadingplay.com/static/images/2230c2d1d9f0cc22fb2bc1a2d5592f4c_Adelante.png">    
+             </div>
+        </div>
+</section>
+<section>
+        <div class="row space20">
+             <div class="col-sm-offset-1 col-sm-3">
+                 <img class="logo-carrito"src="https://7static.loadingplay.com/static/images/accd0fd7accfb000cb61eaf9f08362b1_carrito.png">     
+             </div>   
+             <div class="col-sm-5">
+                 <h1>Tienda online oficial</h1>
+                 <p>www.gianidafirenze.cl</p>    
+             </div>
+             <div class="col-sm-3">
+                    <img class="flecha" src="https://7static.loadingplay.com/static/images/2230c2d1d9f0cc22fb2bc1a2d5592f4c_Adelante.png">    
+             </div>
+        </div>
+</section>
+<section>
+        <div class="row space90">
+             <div class="col-sm-offset-5 col-sm-4">
+             <button type="button" class="btn btn-lg btn-default">Cancelar</button>
+             </div>   
+        </div>
+</section>
+</body>
+</div>
+<!-- CAMBIAR LOCAL -->
+
+<script>
+
+var homePage = document.getElementById("homePage"),
+    detalleProducto = document.getElementById("detalleProducto"),
+    pedido = document.getElementById("pedido"),
+    cambioLocal = document.getElementById("cambioLocal"),
+    currentPage = homePage;
+
+    function slidePageFrom(page, from) {
+        // Position the page at the starting position of the animation
+        page.className = "page " + from;
+        // Position the new page and the current page at the ending position of their animation with a transition class indicating the duration of the animation
+        page.className ="page transition center";
+        currentPage.className = "page transition " + (from === "left" ? "right" : "left");
+        currentPage = page;
+    }
+
+</script>
+</body>
